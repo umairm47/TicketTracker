@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Using bootstrap 3.3.7 for all our CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 
     <title>Document</title>
 </head>
-<body>
+<!--All the classes being used are Bootstrap classes-->
+<body onload="fetchIssues()">
+
     <section class="container">
         <h1>Ticket Tracker for Demo</h1>
         <section class="jumbotron">
@@ -24,11 +27,11 @@
                     <input type="text" class="form-control" id="issueDescInput" placeholder="Issue Description...">
                 </div>
                 <div class="form-group">
-                    <label for="issueSevInput">Severity</label>
+                    <label for="issueSeverityInput">Severity</label>
                    <select class="form-control" id ="issueSeverityInput">
-                        <option value="Low"></option>
-                        <option value="Medium"></option>
-                        <option value="High"></option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
                    </select>
                 </div>
                 <div class="form-group">
@@ -40,7 +43,7 @@
         </section>
         <section class="row">
             <div class="col-lg-12">
-                <div id="issueList">
+                <div id="issuesList">
                     <!--This will be populated by JS-->
                 </div>
             </div>
